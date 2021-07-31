@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>Trazar rutas en Google Maps</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="js/segumiento.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="center">
+        <button onclick="startTracing()">Iniciar segumiento</button>
+    </div>
+    <div id="delivery" class="center hidden">
+      Buscando Mensajero cercano 
+      <img src="img/loading.gif" width="80px" alt="">
+    </div>
+    <div id="deliveryFound" class="center hidden">
+      <img src="img/delivery.png" width="80px" alt=""> <br>
+      Mensajero Disponible
+      Alexis Soto
+    </div>
+    <div class="container">
+      <div class="col hidden" id="start" >
+            <h5> Pedido Solicitado </h5>
+            <p>
+              ¡Gracias!, Orden Creada <br>
+              <span>Datos de entrega : </span> Av. Paseo de la Reforma 51, Tabacalera, Ciudad de México, CDMX <br>
+              <span>Tiempo estimado:</span> 20 min.
+            </p>
+      </div>
+      <div class="col center hidden" id="status"> 
+          <h5>Estado de segumiento</h5>
+          <div id="contastatus"></div>
+        </div>
+      <div class="col center hidden" id="guide"> 
+          <h5>Pedido esta en camino</h5>
+          <img src="img/delivery.png" width="40px" alt=""> <br>
+            Alexis Soto <br>
+            <img src="img/moto.png" alt="">  <br>
+            <span>Tiempo estimado de entrega: </span> 20 min.
+        </div>
+        <div class="col center hidden" id="end">
+            <h5>Pedido Entregado</h5>
+            <img src="img/entregado.png" alt="">
+            <p>¡Gracias por comprar con nosotros!</p>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY1sM-lFhyBAsnAIeLwdex_WctSVQM2ag&callback=initMap&libraries=&v=weekly" async></script>
+  </body>
+</html>
